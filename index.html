@@ -7,7 +7,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <!--
     Write a program that prints the numbers from 1 to 100.  
     But for multiples of three print “Fizz” instead of the number and
@@ -38,7 +37,6 @@ p {
 }
 </style>
 
-
 <body>
 <button onclick="display()">Run FizzBuzz</button>
 <p>Resulting "FizzBuzz" array:<span id="demo"></span></p>
@@ -58,7 +56,7 @@ function fizzBuzz() {
             result.push(' Buzz');
         }
         else {
-            result.push(` ${i}`)
+            result.push(` ${i}`);
         }
     }
     return result;
