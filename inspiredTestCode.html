@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Inspired Test Code</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+    Write a program that prints the numbers from 1 to 100.  
+    But for multiples of three print “Fizz” instead of the number and
+    for the multiples of five print “Buzz”.
+    For numbers which are multiples of both three and five print “FizzBuzz”.
+    Please host your solution on github and send the repo link
+-->
+
+<style>
+button {
+    font-family: monospace;
+    font-size: medium;
+    color: white;
+    background-color: green;
+    margin: 20px 20px;
+    border: 1px solid black;
+}
+
+p {
+    font-family: monospace;
+    font-size: medium;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#demo {
+    color: red;
+}
+</style>
+
+
+<body>
+<button onclick="display()">Run FizzBuzz</button>
+<p>Resulting "FizzBuzz" array:<span id="demo"></span></p>
+</body>
+
+<script>
+function fizzBuzz() {
+    let result = [];
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            result.push(' FizzBuzz');
+        }
+        else if (i % 3 === 0) {
+            result.push(' Fizz');
+        }
+        else if (i % 5 === 0) {
+            result.push(' Buzz');
+        }
+        else {
+            result.push(` ${i}`)
+        }
+    }
+    return result;
+}
+
+function display() {
+  document.getElementById("demo").innerHTML = fizzBuzz();
+}
+
+</script>
+
